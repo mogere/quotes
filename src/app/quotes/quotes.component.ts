@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Quote } from '../quote';
 
 @Component({
   selector: 'app-quotes',
@@ -7,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuotesComponent implements OnInit {
 
-  constructor() { }
-
+    quotes:Quote = new Quote("Even the rich cry","Pau",new Date(2019,6,9));
+  
+  
+  
+  
   ngOnInit() {
   }
 
