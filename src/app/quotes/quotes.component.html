@@ -14,9 +14,9 @@
                 <p class ="float-right"><i>By {{quotes.author}}</i></p>
             </div>
             <div class="card-footer text-muted">
-                    {{quotes.vote.upVote}}{{quotes.vote.downVote}}
-                    <button class = "float-right btn-primary-outline">
-                        <span class = "glyphicon glyphicon-delete">delete</span></button>
+                    <span [upvote]>Likes  {{quotes.vote.upVote}}</span> <span>Dislikes  {{quotes.vote.downVote}}</span> 
+                    <button (click)='deleteQuote' class = "float-right btn-primary-outline">
+                       delete</button>
             </div>
         </div>    
 </div>
