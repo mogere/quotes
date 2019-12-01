@@ -9,7 +9,7 @@ import { Quote } from '../quote';
 export class QuotesComponent implements OnInit {
 
     quotes:Quote = new Quote("Even the rich cry","Pau",new Date(2019,6,9));
-  
+    // , vote:{upVote:10,downVote:20}
   
   
   

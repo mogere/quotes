@@ -10,9 +10,13 @@
             </div>
             <div class="card-body text-center">
                 <p>"{{quotes.text}}"</p>
+                <p class ="float-left"><i>Posted {{quotes.timePassed}} ago</i></p>
+                <p class ="float-right"><i>By {{quotes.author}}</i></p>
             </div>
             <div class="card-footer text-muted">
-                    {{quotes.timePassed}}
+                    {{quotes.vote.upVote}}{{quotes.vote.downVote}}
+                    <button class = "float-right btn-primary-outline">
+                        <span class = "glyphicon glyphicon-delete">delete</span></button>
             </div>
         </div>    
 </div>
