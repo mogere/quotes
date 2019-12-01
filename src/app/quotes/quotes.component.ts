@@ -8,11 +8,12 @@ import { Quote } from '../quote';
 })
 export class QuotesComponent implements OnInit {
 
-    quotes:Quote;
-    // , vote:{upVote:10,downVote:20}
+    quotes:Quote[];
+    
   
   constructor(){
-    this.quotes= {
+    this.quotes= [{
+      id:1,
       text:'Even the rich cry',
       author:'Anonymous',
       timePassed:new Date(2019,6,9),
@@ -20,8 +21,27 @@ export class QuotesComponent implements OnInit {
         upVote:10,
         downVote:5
       }
-    }
-    // new Quote("Even the rich cry","Pau",new Date(2019,6,9));
+    },
+    {
+      id:2,
+      text:'It is never too late to start',
+      author:'James Brown',
+      timePassed:new Date(2019,7,9),
+      vote:{
+        upVote:15,
+        downVote:7
+      }
+    },
+    {
+      id:3,
+      text:'Even the rich cry',
+      author:'Anonymous',
+      timePassed:new Date(2019,6,9),
+      vote:{
+        upVote:10,
+        downVote:5
+      }
+    }]
   }
   
   ngOnInit() {

@@ -3,18 +3,19 @@
         <div class="card-title text-center">
             <h2>These are your Quotes for the day</h2>
         </div>
-    </div>    
-    <div class="card">
+    </div>   
+     
+    <div *ngFor='let quote of quotes; let i = index' class="card">
             <div class="card-title text-center">
-                <h2>Quote1</h2>
+                <h2>Quote{{i}}</h2>
             </div>
             <div class="card-body text-center">
-                <p>"{{quotes.text}}"</p>
+                <p id={{i}}>"{{quotes.text}}"</p>
                 <p class ="float-left"><i>Posted {{quotes.timePassed}} ago</i></p>
                 <p class ="float-right"><i>By {{quotes.author}}</i></p>
             </div>
             <div class="card-footer text-muted">
-                    <span [upvote]>Likes  {{quotes.vote.upVote}}</span> <span>Dislikes  {{quotes.vote.downVote}}</span> 
+                    <span>Likes  {{quotes.vote.upVote}}</span>   <span>Dislikes  {{quotes.vote.downVote}}</span> 
                     <button (click)='deleteQuote' class = "float-right btn-primary-outline">
                        delete</button>
             </div>
