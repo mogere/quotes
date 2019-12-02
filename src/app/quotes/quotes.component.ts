@@ -13,7 +13,7 @@ export class QuotesComponent implements OnInit {
   
   constructor(){
     this.quotes= [{
-      id:1,
+      
       text:'Even the rich cry',
       author:'Anonymous',
       timePassed:new Date(2019,6,9),
@@ -23,17 +23,17 @@ export class QuotesComponent implements OnInit {
       }
     },
     {
-      id:2,
+      
       text:'It is never too late to start',
       author:'James Brown',
-      timePassed:new Date(2019,7,9),
+      timePassed:new Date(),
       vote:{
         upVote:15,
         downVote:7
       }
     },
     {
-      id:3,
+      
       text:'Even the rich cry',
       author:'Anonymous',
       timePassed:new Date(2019,6,9),
@@ -49,11 +49,20 @@ export class QuotesComponent implements OnInit {
 
   deleteQuote(index){
     
-      let toDelete = confirm(`Are you sure you want to delete this quote by  ${this.quotes[index].author}?`)
+      let toDelete = confirm(`Are you sure you want to delete this quote by ${this.quotes[index].author}?`)
     
     if (toDelete){
       this.quotes.splice(index,1);;
     }
+  }
+
+  addNewQuote(quote){
+    quote.text = quote.text;
+    quote.author = quote.author;
+    quote.timePassed = new Date(quote.timePassed);
+    quote.upVote = quote.upVote;
+    quote.downVote = quote.downVote;
+    this.quotes.push(quote);
   }
 }
 
