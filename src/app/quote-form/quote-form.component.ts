@@ -8,15 +8,16 @@ import { Quote } from '../quote';
 })
 export class QuoteFormComponent implements OnInit {
   
-  newQuote:Quote = {
-      text:'',
-      author:'',
-      timePassed:new Date(),
-      vote:{
-        upVote:0,
-        downVote:0
-      }
-    }
+  newQuote=('ngModel');
+  // new Quote(this.newQuote.text, this.newQuote.author, this.newQuote.timePassed, );
+    //   text,
+    //   author:author,
+    //   timePassed:new Date(),
+    //   vote:{
+    //     upVote:0,
+    //     downVote:0
+    //   }
+    // }
    
   constructor() { 
     // this.newQuote = {
@@ -30,6 +31,9 @@ export class QuoteFormComponent implements OnInit {
     // }
     
   }
+
+
+  
   @Output() addQuote = new EventEmitter<Quote>();
 
   submitQuote(){

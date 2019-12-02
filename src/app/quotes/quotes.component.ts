@@ -23,7 +23,6 @@ export class QuotesComponent implements OnInit {
       }
     },
     {
-      
       text:'It is never too late to start',
       author:'James Brown',
       timePassed:new Date(),
@@ -33,7 +32,6 @@ export class QuotesComponent implements OnInit {
       }
     },
     {
-      
       text:'Even the rich cry',
       author:'Anonymous',
       timePassed:new Date(2019,6,9),
