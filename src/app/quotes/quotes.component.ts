@@ -14,9 +14,9 @@ export class QuotesComponent implements OnInit {
     
   
   constructor(){
-    this.quotes= [new Quote('Even the rich cry','Anonymous',new Date(2019,6,9),10,5),
-    new Quote('It is never too late to start','James Brown',new Date(),15,7),      
-    new Quote('Even the rich cry','Anonymous',new Date(2019,6,9),10,5)]
+    this.quotes= [new Quote('Even the rich cry','Anonymous','James', new Date(2019,6,9),10,5),
+    new Quote('It is never too late to start','James Brown','Brian',new Date(),15,7),      
+    new Quote('Even the rich cry','Anonymous','Andrew',new Date(2019,6,9),10,5)]
   }
   
   ngOnInit() {
