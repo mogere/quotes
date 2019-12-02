@@ -6,25 +6,19 @@
       
                 <label for="text">Quote text</label>
                 <textarea class="form-control" id="text" rows="4" [(ngModel)]="newQuote.text" text = "text" #text='ngModel' required></textarea>
-                <div [hidden]="text.valid || text.pristine" class="alert alert-danger">
-                        <p>Quote is required</p>
-                      </div>
+               
             </div>
             <div class="form-group">
       
                 <label for="author">Author of Quote</label>
                 <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" author = "author" #author='ngModel' required>
-                <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
-                        <p>Quote author is required</p>
-                      </div>
+               
             </div>
             <div class="form-group">
       
                 <label for="poster">posted by</label>
                 <input type="text" class="form-control" id="poster" [(ngModel)]="newQuote.poster" poster = "poster" #poster='ngModel' required>
-                <div [hidden]="poster.valid || poster.pristine" class="alert alert-danger">
-                        <p>Quote Poster is required</p>
-                      </div>
+                
                 </div>
             <button>Submit Quote</button>
         </form>

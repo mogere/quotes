@@ -8,27 +8,9 @@ import { Quote } from '../quote';
 })
 export class QuoteFormComponent implements OnInit {
   
-  newQuote=('ngModel');
-  // new Quote(this.newQuote.text, this.newQuote.author, this.newQuote.timePassed, );
-    //   text,
-    //   author:author,
-    //   timePassed:new Date(),
-    //   vote:{
-    //     upVote:0,
-    //     downVote:0
-    //   }
-    // }
-   
+  newQuote= new Quote('', '', new Date(), 0, 0);
+  
   constructor() { 
-    // this.newQuote = {
-    //   text:'',
-    //   author:'QP',
-    //   timePassed:new Date(),
-    //   vote:{
-    //     upVote:0,
-    //     downVote:0
-    //   }
-    // }
     
   }
 

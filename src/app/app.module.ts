@@ -8,6 +8,7 @@ import { QuotesComponent } from './quotes/quotes.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { VotesDirective } from './votes.directive';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { TimePostedPipe } from './time-posted.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
     QuotesComponent,
     NavbarComponent,
     VotesDirective,
-    QuoteFormComponent
+    QuoteFormComponent,
+    TimePostedPipe
   ],
   imports: [
     BrowserModule,

@@ -10,44 +10,20 @@ export class QuotesComponent implements OnInit {
 
     quotes:Quote[];
     
+    
+    
   
   constructor(){
-    this.quotes= [{
-      
-      text:'Even the rich cry',
-      author:'Anonymous',
-      timePassed:new Date(2019,6,9),
-      vote:{
-        upVote:10,
-        downVote:5
-      }
-    },
-    {
-      text:'It is never too late to start',
-      author:'James Brown',
-      timePassed:new Date(),
-      vote:{
-        upVote:15,
-        downVote:7
-      }
-    },
-    {
-      text:'Even the rich cry',
-      author:'Anonymous',
-      timePassed:new Date(2019,6,9),
-      vote:{
-        upVote:10,
-        downVote:5
-      }
-    }]
+    this.quotes= [new Quote('Even the rich cry','Anonymous',new Date(2019,6,9),10,5),
+    new Quote('It is never too late to start','James Brown',new Date(),15,7),      
+    new Quote('Even the rich cry','Anonymous',new Date(2019,6,9),10,5)]
   }
   
   ngOnInit() {
   }
 
   deleteQuote(index){
-    
-      let toDelete = confirm(`Are you sure you want to delete this quote by ${this.quotes[index].author}?`)
+      let toDelete = confirm(`Are you sure you want to delete this quote?`)
     
     if (toDelete){
       this.quotes.splice(index,1);;
@@ -55,12 +31,15 @@ export class QuotesComponent implements OnInit {
   }
 
   addNewQuote(quote){
-    quote.text = quote.text;
-    quote.author = quote.author;
     quote.timePassed = new Date(quote.timePassed);
-    quote.upVote = quote.upVote;
-    quote.downVote = quote.downVote;
     this.quotes.push(quote);
+  }
+
+  addLikes(){
+    
+    }
+  addDislikes(){
+    
   }
 }
 
