@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { VotesDirective } from './votes.directive';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { TimePostedPipe } from './time-posted.pipe';
+import { DescriptionComponent } from './description/description.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TimePostedPipe } from './time-posted.pipe';
     NavbarComponent,
     VotesDirective,
     QuoteFormComponent,
-    TimePostedPipe
+    TimePostedPipe,
+    DescriptionComponent
   ],
   imports: [
     BrowserModule,
