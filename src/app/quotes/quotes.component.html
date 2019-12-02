@@ -12,9 +12,10 @@
                 <!-- <app-description></app-description > -->
             </div>
             <div class="card-footer text-muted">
-                    <a href = "#" (click)= 'addLikes()'>Likes  {{quote.upVote}}</a> &nbsp; 
-                     <a href = "#" (click)= 'addDislikes()'>Dislikes  {{quote.downVote}}</a> 
-                    <button (click)='deleteQuote(index)' class = "float-right btn-primary-outline">
+                <button type="button" (click)= 'addLikes()' class="btn btn-outline-primary">Likes  {{quote.upVote}}</button>
+                     &nbsp; 
+                     <button type="button" (click)= 'addDislikes()' class="btn btn-outline-danger">Dislikes  {{quote.downVote}}</button>
+                     <button (click)='deleteQuote(index)' class = "float-right btn-primary-outline">
                        delete</button>
             </div>
         </div>    
