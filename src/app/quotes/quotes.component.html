@@ -7,17 +7,18 @@
      
     <div *ngFor='let quote of quotes; let i = index' class="card">
             <div class="card-title text-center">
-                <h2>Quote{{i}}</h2>
+                <h2>Quote</h2>
             </div>
             <div class="card-body text-center">
-                <p id={{i}}>"{{quotes.text}}"</p>
-                <p class ="float-left"><i>Posted {{quotes.timePassed}} ago</i></p>
-                <p class ="float-right"><i>By {{quotes.author}}</i></p>
+                <p id={{i}}>"{{quote.text}}"</p>
+                <p class ="float-left"><i>Posted {{quote.timePassed}} ago</i></p>
+                <p class ="float-right"><i>By {{quote.author}}</i></p>
             </div>
             <div class="card-footer text-muted">
-                    <span>Likes  {{quotes.vote.upVote}}</span>   <span>Dislikes  {{quotes.vote.downVote}}</span> 
-                    <button (click)='deleteQuote' class = "float-right btn-primary-outline">
+                    <span>Likes  {{quote.vote.upVote}}</span> &nbsp; <span>Dislikes  {{quote.vote.downVote}}</span> 
+                    <button (click)='deleteQuote(i)' class = "float-right btn-primary-outline">
                        delete</button>
             </div>
         </div>    
+        
 </div>
